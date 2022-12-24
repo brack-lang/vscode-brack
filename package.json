@@ -1,0 +1,25 @@
+{
+  "name": "vscode-brack",
+  "displayName": "Brack Syntax",
+  "description": "Provides Brack Syntax Highlight for Visual Studio Code",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.74.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [{
+      "id": "brack",
+      "aliases": ["Brack", "brack"],
+      "extensions": [".[]"],
+      "configuration": "./language-configuration.json"
+    }],
+    "grammars": [{
+      "language": "brack",
+      "scopeName": "source.brack",
+      "path": "./syntaxes/brack.tmLanguage.json"
+    }]
+  }
+}
