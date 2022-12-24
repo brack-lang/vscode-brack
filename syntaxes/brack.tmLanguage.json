@@ -6,7 +6,10 @@
 			"include": "#keywords"
 		},
 		{
-			"include": "#strings"
+			"include": "#commands"
+		},
+		{
+			"include": "#arguments"
 		}
 	],
 	"repository": {
@@ -16,16 +19,19 @@
 				"match": "\\b(if|while|for|return)\\b"
 			}]
 		},
-		"strings": {
-			"name": "string.quoted.double.brack",
-			"begin": "\"",
-			"end": "\"",
+		"commands": {
 			"patterns": [
 				{
-					"name": "constant.character.escape.brack",
-					"match": "\\\\."
+					"name": "support.function.brack",
+					"match": "(?<=(^|[^\\\\]+)(\\[|\\{|<))[^\\s\\[\\]\\{\\}<>]+"
 				}
 			]
+		},
+		"arguments": {
+			"patterns": [{
+				"name": "string.quoted.brack",
+				"match": "(?<=(^|[^\\\\]+)[\\[\\{<][\\S]+ ([^,]*, )*)[^,\\[\\]<>\\{\\}]+"
+			}]
 		}
 	},
 	"scopeName": "source.brack"
