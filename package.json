@@ -1,0 +1,39 @@
+{
+  "name": "vscode-brack",
+  "version": "0.1.0",
+  "description": "VSCode extension for brack",
+  "main": "dist/extension.js",
+  "scripts": {
+    "compile": "tsc -p ."
+  },
+  "author": "Mutsuha Asada",
+  "activationEvents": [
+    "onLanguage:brack"
+  ],
+  "contributes": {
+    "languages": [
+      {
+        "id": "brack",
+        "extensions": [
+          ".br"
+        ]
+      }
+    ]
+  },
+  "licenses": [
+    {
+      "type": "MIT"
+    },
+    {
+      "type": "Apache-2.0"
+    }
+  ],
+  "dependencies": {
+    "tsc": "^2.0.4",
+    "typescript": "^5.3.3",
+    "vscode-languageclient": "^9.0.1"
+  },
+  "engines": {
+    "vscode": "^1.52.1"
+  }
+}
