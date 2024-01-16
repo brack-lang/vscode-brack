@@ -29,8 +29,10 @@
     }
   ],
   "dependencies": {
+    "@types/vscode": "^1.85.0",
     "tsc": "^2.0.4",
     "typescript": "^5.3.3",
+    "vscode": "^1.1.37",
     "vscode-languageclient": "^9.0.1"
   },
   "engines": {
