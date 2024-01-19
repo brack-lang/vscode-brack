@@ -3,10 +3,13 @@ import { LanguageClient } from 'vscode-languageclient/node'
 
 let client: LanguageClient
 
-export const activate = (_: ExtensionContext) => {
+export const activate = (context: ExtensionContext) => {
     try {
         const serverOptions = {
-            command: "brack --language-server"
+            command: "brack",
+            args: [
+                "language-server"
+            ]
         }
         const clientOptions = {
             documentSelector: [
@@ -24,7 +27,7 @@ export const activate = (_: ExtensionContext) => {
         )
         client.start()
     } catch (error) {
-        window.showErrorMessage("brack-language-server could not be started.")   
+        window.showErrorMessage("brack-language-server could not be started.")
     }
 }
 
